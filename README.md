@@ -1,4 +1,4 @@
-# Web-Application-Penetration
+# Web-Application-Penetration-Testing
 In This Repository I M Gonna Tell You About How To Penetrate Web-Application Test Step By Step.
 #  Starting With Recon Phase(Unauthorized Access).
     1:- Resolve Dns Records Name Using dig Command.
