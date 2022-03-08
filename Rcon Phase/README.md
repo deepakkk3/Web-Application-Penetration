@@ -49,19 +49,24 @@ In This Repository I M Gonna Tell You About How To Penetrate Web-Application Tes
  5- Enumerate Supported HTTP Methods Using Namp.
     
     # nmap --script http-methods <Target IP ADDRESS> 
-    # nmap --script http-methods --script-args http-methods.url-path='/website' <Target IP ADDRESS>
+ ![image](https://user-images.githubusercontent.com/80889609/157235359-21cfe1d2-82fb-4fda-a73f-f4136121cdb7.png)
  
+    # nmap --script http-methods --script-args http-methods.url-path='/website' <Target IP ADDRESS>
+    
        
  6- Checking SSL And TLS Versions Using Nmap
 
     # nmap --script ssl-cert -p 443 <Target IP ADDRESS>
+ ![image](https://user-images.githubusercontent.com/80889609/157234643-b2c056ce-79bd-4e38-8414-b8215d083963.png)
+   
      # nmap --script ssl-enum-ciphers -p 443 <Target IP ADDRESS>
-  ![image](https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.oreilly.com%2Flibrary%2Fview%2Fweb-penetration-testing%2F9781788623377%2F20de9f00-5660-48d2-be7c-8d2f3de4a840.xhtml&psig=AOvVaw07pbHzbpKpN4pFwA1kCNWN&ust=1646827059928000&source=images&cd=vfe&ved=0CAgQjRxqFwoTCOj85e27tvYCFQAAAAAdAAAAABAJ)
-     
+  ![image](https://user-images.githubusercontent.com/80889609/157234248-ef99de4f-afc3-4bde-929a-50286c7744f9.png)
 
  7- Host Header Injection.
  
       # nmap -sV --script=http-headers <Target IP ADDRESS>
+ ![image](https://user-images.githubusercontent.com/80889609/157235255-ea91f2aa-093a-4c2d-8383-60d5fdf6f8fb.png)
+
     
  8- Waybackurls.
 
@@ -74,5 +79,7 @@ In This Repository I M Gonna Tell You About How To Penetrate Web-Application Tes
  10- Find Hidden Web Directories with Dirsearch.
         
      # dirsearch -u <Target Website URL>
-        
+ 
+ 
+ 
      
