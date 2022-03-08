@@ -6,7 +6,7 @@ SQL-I or (Structured query language) Injection.
     Manipulation To Access Information That Was Not Intended To Be Displayed.This Information May Include Any Number
     Of Items, Including Sensitive Company Data, User Lists Or Private Customer Details.
      
-     ![image](https://user-images.githubusercontent.com/80889609/157209037-e92598ba-9b54-4cba-a298-dd8d8fd12e3a.png)
+   ![image](https://user-images.githubusercontent.com/80889609/157209037-e92598ba-9b54-4cba-a298-dd8d8fd12e3a.png)
        
 2:- Types Of SQL Injections.
  
