@@ -173,6 +173,6 @@ https://cheatsheetseries.owasp.org/cheatsheets/Injection_Prevention_Cheat_Sheet.
 https://www.owasp.org/index.php/Testing_for_NoSQL_injection
 
 
-◇ SQL Injection Query Parameterization Cheat Sheet
+%- SQL Injection Query Parameterization Cheat Sheet
  https://cheatsheetseries.owasp.org/cheatsheets/Query_Parameterization_Cheat_Sheet.html
 
