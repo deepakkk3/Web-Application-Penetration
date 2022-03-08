@@ -49,14 +49,14 @@ In This Repository I M Gonna Tell You About How To Penetrate Web-Application Tes
  5- Enumerate Supported HTTP Methods Using Namp.
     
     # nmap --script http-methods <Target IP ADDRESS> 
-![image](/root/Pictures/Screenshot from 2022-03-08 17-19-00.png)
-     # nmap --script http-methods --script-args http-methods.url-path='/website' <Target IP ADDRESS>
+    # nmap --script http-methods --script-args http-methods.url-path='/website' <Target IP ADDRESS>
  
        
  6- Checking SSL And TLS Versions Using Nmap
 
     # nmap --script ssl-cert -p 443 <Target IP ADDRESS>
      # nmap --script ssl-enum-ciphers -p 443 <Target IP ADDRESS>
+  ![image](/root/Pictures/Screenshot from 2022-03-08 17-22-13.png)
      
 
  7- Host Header Injection.
