@@ -36,25 +36,32 @@ In This Repository I M Gonna Tell You About How To Penetrate Web-Application Tes
  3- Nmap Don’t Ping Scan.
 
     # nmap -Pn <Target IP ADDRESS>
+    
+ ![image](https://user-images.githubusercontent.com/80889609/157229641-d0f5221b-665c-45e0-9a9d-ad57ab20aeba.png)
+
 
  4- Nmap Service Version Detection.
 
      # nmap -sV <Target IP ADDRESS>
-     
+
+![image](https://linuxhint.com/wp-content/uploads/2020/02/2-14.png)
+
  5- Enumerate Supported HTTP Methods Using Namp.
     
     # nmap --script http-methods <Target IP ADDRESS> 
-    # nmap --script http-methods --script-args http-methods.url-path='/website' <Target IP ADDRESS>
+ ![image](/root/Pictures/Screenshot from 2022-03-08 17-19-00.png)
+     # nmap --script http-methods --script-args http-methods.url-path='/website' <Target IP ADDRESS>
+ 
        
  6- Checking SSL And TLS Versions Using Nmap
 
-     # nmap --script ssl-cert -p 443 <Target IP ADDRESS>
+    # nmap --script ssl-cert -p 443 <Target IP ADDRESS>
      # nmap --script ssl-enum-ciphers -p 443 <Target IP ADDRESS>
      
 
  7- Host Header Injection.
  
-     # nmap -sV --script=http-headers <Target IP ADDRESS>
+      # nmap -sV --script=http-headers <Target IP ADDRESS>
     
  8- Waybackurls.
 
