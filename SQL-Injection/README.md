@@ -1,5 +1,5 @@
 SQL-I or (Structured query language) Injection.
-- [What Is SQL Injection .?](#What-Is-SQL-Injection .?)
+- [What Is SQL Injection .?](#What-Is-SQL-Injection)
 
 What Is SQL Injection .?
      
