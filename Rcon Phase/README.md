@@ -56,7 +56,7 @@ In This Repository I M Gonna Tell You About How To Penetrate Web-Application Tes
 
     # nmap --script ssl-cert -p 443 <Target IP ADDRESS>
      # nmap --script ssl-enum-ciphers -p 443 <Target IP ADDRESS>
-  ![image](/root/Pictures/Screenshot from 2022-03-08 17-22-13.png)
+  ![image](https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.oreilly.com%2Flibrary%2Fview%2Fweb-penetration-testing%2F9781788623377%2F20de9f00-5660-48d2-be7c-8d2f3de4a840.xhtml&psig=AOvVaw07pbHzbpKpN4pFwA1kCNWN&ust=1646827059928000&source=images&cd=vfe&ved=0CAgQjRxqFwoTCOj85e27tvYCFQAAAAAdAAAAABAJ)
      
 
  7- Host Header Injection.
