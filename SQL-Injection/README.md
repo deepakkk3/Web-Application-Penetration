@@ -27,20 +27,22 @@ SQL-I or (Structured query language) Injection.
      This Method Is Called Blind SQLi Because The Data Is Not Transferred From The Website Database To The Attacker,thus the attacker cannot 
       See Information About The Attack In-Band.
 
-    Blind SQL Injections rely On The Response And Behavioral Patterns Of The Server So They Are Typically Slower To Execute But May Be Just As Harmful. 
+    Blind SQL Injections Rely On The Response And Behavioral Patterns Of The Server So They Are Typically Slower To Execute But May Be Just As Harmful. 
       Blind SQL Injections Can Be Classified As Follows:-
     
-     • Boolean—that attacker sends a SQL query to the database prompting the application to return a result. 
+     • Boolean — That Attacker Sends A SQL Query To The Database Prompting The Application To Return A Result. 
        The result will vary depending on whether the query is true or false. Based on the result, the information within the HTTP
-       response will modify or stay unchanged.The attacker can then work out if the message generated a true or false result.
+       response will modify or stay unchanged.The attacker Can Then Work Out If The Message Generated A True Or False Result.
 
-    • Time-based—attacker sends a SQL query to the database, which makes the database wait (for a period in seconds) before it can react. The attacker can see from the time the database takes to respond, whether a query is true or false. Based on the result, an HTTP response will be generated instantly or after a waiting period. The attacker can thus work out if the message they used returned true or false, without relying on data from the database.
+    • Time-based—attacker Sends A SQL Query To The Database, Which Makes The Database Wait (For A Period In Seconds) Before It Can React.
+    The Attacker Can See From The Time The Database Takes To Respond, Whether A Query Is True Or False. Based On The Result, An HTTP 
+    Response Will Be Generated Instantly Or After A Waiting Period. The Attacker Can Thus Work Out If The Message They Used Returned True Or False,                   Without Relying On Data From The Database.
      
    >Out-of-band SQLi   
      
      The attacker can only carry out this form of attack when certain  features are enabled on the database server used by the web application. 
      This form of attack is primarily used as an alternative to the in-band  and inferential SQLi techniques. 
 
-    Out-of-band SQLi is performed when the attacker canâ€™t use the same  channel to launch the attack and  gather information, or when a server is  too slow or  
-    unstable for these actions to be performed. These  techniques count on the capacity of the server to create DNS or HTTP    requests to transfer data to an 
-    attacker.
+    Out-Of-Band SQLi Is Performed When The Attacker Can't Use The Same Channel To Launch The Attack And Gather Information, Or When A Server Is
+    Too Slow Or Unstable For These Actions To Be Performed. These Techniques Count On The Capacity Of The Server To Create DNS Or HTTP Requests 
+    To Transfer Data To An Attacker.
