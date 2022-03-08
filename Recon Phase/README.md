@@ -81,5 +81,4 @@ In This Repository I M Gonna Tell You About How To Penetrate Web-Application Tes
      # dirsearch -u <Target Website URL>
  
  
- 
      
