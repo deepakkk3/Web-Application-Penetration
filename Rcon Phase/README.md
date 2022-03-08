@@ -37,7 +37,7 @@ In This Repository I M Gonna Tell You About How To Penetrate Web-Application Tes
 
     # nmap -Pn <Target IP ADDRESS>
     
- ![image](https://user-images.githubusercontent.com/80889609/157229641-d0f5221b-665c-45e0-9a9d-ad57ab20aeba.png)
+![image](https://user-images.githubusercontent.com/80889609/157229641-d0f5221b-665c-45e0-9a9d-ad57ab20aeba.png)
 
 
  4- Nmap Service Version Detection.
@@ -49,7 +49,7 @@ In This Repository I M Gonna Tell You About How To Penetrate Web-Application Tes
  5- Enumerate Supported HTTP Methods Using Namp.
     
     # nmap --script http-methods <Target IP ADDRESS> 
- ![image](/root/Pictures/Screenshot from 2022-03-08 17-19-00.png)
+![image](/root/Pictures/Screenshot from 2022-03-08 17-19-00.png)
      # nmap --script http-methods --script-args http-methods.url-path='/website' <Target IP ADDRESS>
  
        
