@@ -14,6 +14,8 @@
  
     SQL Injection Can Be Classified Into Three Major Categories – In-band SQLi, Inferential (Blind ) SQLi  & 
     Out -Of-Band SQLi.
+  ![image](https://user-images.githubusercontent.com/80889609/157405552-2dbf6907-e0a2-4707-86d9-737e21de3388.png)
+
 
 ## In-band SQLi (Classic SQLi) 
   
