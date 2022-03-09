@@ -1,7 +1,5 @@
 # SQL-I or (Structured query language) Injection.
- ![image](https://user-images.githubusercontent.com/80889609/157404908-1139047d-f9c7-4edb-9c7f-c8c04396ae5f.png)
-
-
+ 
 # What Is SQL Injection .?
      
      SQL Injection, Also Known As SQLI,Is A Common Attack Vector That Uses Malicious SQL Code For Backend Database 
@@ -63,8 +61,8 @@
     The first example is very simple. It shows, how an attacker can use an SQL Injection vulnerability to go around 
     application security and authenticate as the administrator.
 
-  The following script is pseudocode executed on a web server. It is a simple example of authenticating with a username and a password.
-  The example database has a table named users with the following columns: username and password. 
+  The Following Script Is Pseudocode Executed On A Web Server.It Is A Simple Example Of Authenticating With A 'Username' And A 'Password'.
+  The Example Database Has A Table Named 'users' with the following columns: "Username And Password". 
    
     # Define POST variables
       uname = request.POST['username']
@@ -78,17 +76,17 @@
    
    These Input Fields Are Vulnerable To SQL Injection. An Attacker Could Use SQL Commands In The Input In A Way 
    That Would Alter The SQL Statement Executed By The Database Server. For Example, They Could Use A Trick
-   Involving A Single Quote And Set The Passwd Field To:-
+   Involving A Single Quote And Set The 'Passwd' Field To:-
 
       password' OR 1=1
 
    As A Result, The Database Server Runs The Following SQL Query:
 
-  SELECT id FROM users WHERE username='username' AND password='password' OR 1=1'
+      SELECT id FROM users WHERE username='username' AND password='password' OR 1=1'
 
-  Because Of The OR 1=1 Statement, The WHERE Clause Returns The First id From The users Table No Matter What The username And password Are.
-  The First user id In A   Database Is Very Often The Administrator. In This Way, The Attacker Not Only Bypasses Authentication But Also 
-  Gains Administrator Privileges. They Can Also Comment Out The Rest Of The SQL Statement To Control The Execution Of The SQL Query Further:
+   Because Of The "OR 1=1" Statement,The 'WHERE' Clause Returns The First 'id' From The 'users' Table No Matter What The 'username' And 'password' Are.
+   The First user 'id' In A Database Is Very Often The Administrator.In This Way,The Attacker Not Only Bypasses Authentication But Also 
+   Gains Administrator Privileges.They Can Also Comment Out The Rest Of The SQL Statement To Control The Execution Of The SQL Query Further:
 
     -- MySQL, MSSQL, Oracle, PostgreSQL, SQLite
     ' OR '1'='1' --
@@ -104,18 +102,18 @@
  One Of The Most Common Types Of SQL Injection uses The UNION Operator. It Allows The Attacker To Combine The Results Of Two Or More SELECT 
  Statements Into A Single Result. The Technique Is Called Union-Based SQL Injection.
 
- The following is an example of this technique. It uses the web page testphp.vulnweb.com, an intentionally vulnerable website hosted by Acunetix.
- The following HTTP request is a normal request that a legitimate user would send:
+ The Following Is An Example Of This Technique.It Uses The Web Page testphp.vulnweb.com, An Intentionally vulnerable Website.
+ The Following HTTP Request Is A Normal Request That A Legitimate 'user' Would Send:
 
     GET http://testphp.vulnweb.com/artists.php?artist=1 HTTP/1.1
      Host: testphp.vulnweb.com
  ![image](https://user-images.githubusercontent.com/80889609/157415905-37dc9a7b-eb47-4a93-a2b8-e702e0fac900.png)
 
- The Artist Parameter Is Vulnerable To SQL Injection.The Following Payload Modifies The Query To Look For An Inexistent Record. 
- It Sets The Value In The URL Query String To -1. Of Course, It Could Be Any Other Value That Does Not Exist In The Database.
- However, A Negative Value Is A Good  Guess Because An Identifier In A Database Is Rarely A Negative Number.
+ The 'Artist' Parameter Is Vulnerable To SQL Injection.The Following Payload Modifies The Query To Look For An Inexistent Record. 
+ It Sets The Value In The URL Query String To '-1'.Of Course, It Could Be Any Other Value That Does Not Exist In The Database.
+ However, A Negative Value Is A Good Guess Because An Identifier In A Database Is Rarely A Negative Number.
 
- In SQL Injection,The UNION Operator Is Commonly Used To Attach A Malicious SQL Query To The Original Query Intended To Be Run 
+ In SQL Injection,The 'UNION' Operator Is Commonly Used To Attach A Malicious SQL Query To The Original Query Intended To Be Run 
  By The Web Application. The Result Of The Injected Query Will Be Joined With The Result Of The Original Query.This Allows The
  Attacker To Obtain Column Values From Other Tables.
  
@@ -979,35 +977,33 @@ The Following Example Shows How An SQL Injection Payload Could Be Used To Obtain
      admin") or "1"="1"/*
      1234 " AND 1=0 UNION ALL SELECT "admin", "81dc9bdb52d04dc20036dbd8313ed055
 
-# References :
+# References:-
 
-%- SQL Injection ( OWASP )
- https://www.owasp.org/index.php/SQL_Injection
+## SQL Injection ( OWASP )
+   https://www.owasp.org/index.php/SQL_Injection
 
-%- PL/SQL:SQL Injection
- https://www.owasp.org/index.php/PL/SQL:SQL_Injection
+## PL/SQL:SQL Injection
+   https://www.owasp.org/index.php/PL/SQL:SQL_Injection
 
-%- Blind SQL Injection
- https://www.owasp.org/index.php/Blind_SQL_Injection
+## Blind SQL Injection
+   https://www.owasp.org/index.php/Blind_SQL_Injection
 
-%- Testing for SQL Injection (OTG-INPVAL-005)
- https://www.owasp.org/index.php/Testing_for_SQL_Injection_(OTG-INPVAL-005)
+## Testing for SQL Injection (OTG-INPVAL-005)
+   https://www.owasp.org/index.php/Testing_for_SQL_Injection_(OTG-INPVAL-005)
 
-%- Reviewing Code for SQL Injection
- https://www.owasp.org/index.php/Reviewing_Code_for_SQL_Injection
+## Reviewing Code for SQL Injection
+   https://www.owasp.org/index.php/Reviewing_Code_for_SQL_Injection
 
-%- SQL Injection Bypassing WAF
- https://www.owasp.org/index.php/SQL_Injection_Bypassing_WAF
+## SQL Injection Bypassing WAF
+   https://www.owasp.org/index.php/SQL_Injection_Bypassing_WAF
 
-%- SQL Injection Injection Prevention Cheat Sheet
-https://cheatsheetseries.owasp.org/cheatsheets/Injection_Prevention_Cheat_Sheet.html
+## SQL Injection Injection Prevention Cheat Sheet
+   https://cheatsheetseries.owasp.org/cheatsheets/Injection_Prevention_Cheat_Sheet.html
 
-%- Testing for NoSQL injection
-https://www.owasp.org/index.php/Testing_for_NoSQL_injection
+## Testing for NoSQL injection
+   https://www.owasp.org/index.php/Testing_for_NoSQL_injection
 
+## SQL Injection Query Parameterization Cheat Sheet
+   https://cheatsheetseries.owasp.org/cheatsheets/Query_Parameterization_Cheat_Sheet.html
 
-%- SQL Injection Query Parameterization Cheat Sheet
- https://cheatsheetseries.owasp.org/cheatsheets/Query_Parameterization_Cheat_Sheet.html
-
-
- Soure:-https://github.com/payloadbox/sql-injection-payload-list.git
+    Soure:- https://github.com/payloadbox/sql-injection-payload-list.git
