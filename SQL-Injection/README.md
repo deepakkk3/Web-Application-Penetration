@@ -1005,5 +1005,8 @@ The Following Example Shows How An SQL Injection Payload Could Be Used To Obtain
 
 ## SQL Injection Query Parameterization Cheat Sheet
    https://cheatsheetseries.owasp.org/cheatsheets/Query_Parameterization_Cheat_Sheet.html
+   
+## Practice Here
+    https://portswigger.net/web-security/all-labs
 
     Soure:- https://github.com/payloadbox/sql-injection-payload-list.git
